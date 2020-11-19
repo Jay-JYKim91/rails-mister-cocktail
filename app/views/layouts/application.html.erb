@@ -12,6 +12,14 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="navbar-lewagon">
+        <h1>Cocktails </h1>
+        <%= link_to 'Home', cocktails_path %>
+    </div>
+    <div class="container my-3 col-sm-8 col-sm-offset-3">
+      <%= yield %>
+    </div>
+
   </body>
 </html>

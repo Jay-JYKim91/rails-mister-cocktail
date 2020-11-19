@@ -1,0 +1,22 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Cocktails 🍹</h1>
+    <p class="lead">Something</p>
+  </div>
+</div>
+
+<h1></h1>
+
+<% @cocktails.each do |cocktail| %>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">
+        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      </h5>
+      <%= link_to 'See more', cocktail_path(cocktail), class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
+
+<%= link_to "➕ Add a cocktail", new_cocktail_path %>
