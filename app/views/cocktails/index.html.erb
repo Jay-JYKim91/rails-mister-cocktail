@@ -5,21 +5,27 @@
   </div>
 </div>
 
-<div class="container my-3 col-sm-8 col-sm-offset-3">
+<div class="container my-3 col-sm-6 col-sm-offset-3">
   <%= link_to "➕ Add a cocktail", new_cocktail_path, class: "text-body" %>
-  <div id="cards">
+
   <% @cocktails.each do |cocktail| %>
-      <div>
-        <div class="card my-2 mt-2">
-          <div class="card-body">
-            <h5 class="card-title"><%= cocktail.name %></h5>
-            <%= link_to 'See more', cocktail_path(cocktail), class: "btn btn-primary" %>
-          </div>
+  <div class="row row-cols-1 row-cols-md-3 mt-2">
+    <div class="col mb-4">
+      <div class="card">
+        <img src="https://www.oliviascuisine.com/wp-content/uploads/2016/06/Bourbon-Old-Fashioned-Hero-4.jpg" class="card-img-top" alt="Cocktail_image">
+        <div class="card-body">
+          <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail), class: "text-body font-weight-bold" %></h5>
         </div>
       </div>
-    <% end %>
+    </div>
   </div>
+  <% end %>
 </div>
+
+
+
+
+
 
 
 
