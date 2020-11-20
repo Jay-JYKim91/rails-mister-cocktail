@@ -2,3 +2,8 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+
+#card {
+  display: flex;
+  flex-wrap: wrap;
+}

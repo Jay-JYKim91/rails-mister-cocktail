@@ -7,15 +7,13 @@
 
 <div class="container my-3 col-sm-8 col-sm-offset-3">
   <%= link_to "➕ Add a cocktail", new_cocktail_path, class: "text-body" %>
-  <div class="d-flex">
+  <div id="cards">
   <% @cocktails.each do |cocktail| %>
       <div>
-        <div class="col-sm-6">
-          <div class="card my-2 mt-2">
-            <div class="card-body">
-              <h5 class="card-title"><%= cocktail.name %></h5>
-              <%= link_to 'See more', cocktail_path(cocktail), class: "btn btn-primary" %>
-            </div>
+        <div class="card my-2 mt-2">
+          <div class="card-body">
+            <h5 class="card-title"><%= cocktail.name %></h5>
+            <%= link_to 'See more', cocktail_path(cocktail), class: "btn btn-primary" %>
           </div>
         </div>
       </div>
