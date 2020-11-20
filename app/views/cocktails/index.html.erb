@@ -1,22 +1,26 @@
-<div class="jumbotron jumbotron-fluid">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://static.vinepair.com/wp-content/uploads/2016/11/cocktailsubs-internal-header.jpg);">
   <div class="container">
-    <h1 class="display-4">Cocktails 🍹</h1>
-    <p class="lead">Something</p>
+    <h1>Recipes for Cocktails</h1>
+    <p></p>
   </div>
 </div>
 
-<h1></h1>
+<div class="container my-3 col-sm-8 col-sm-offset-3">
+  <%= link_to "➕ Add a cocktail", new_cocktail_path, class: "text-body" %>
 
-<% @cocktails.each do |cocktail| %>
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">
-        <%= link_to cocktail.name, cocktail_path(cocktail) %>
-      </h5>
-      <%= link_to 'See more', cocktail_path(cocktail), class: "btn btn-primary" %>
+  <% @cocktails.each do |cocktail| %>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card my-2 mt-2">
+          <div class="card-body">
+            <h5 class="card-title"><%= cocktail.name %></h5>
+            <%= link_to 'See more', cocktail_path(cocktail), class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
 
-<%= link_to "➕ Add a cocktail", new_cocktail_path %>
+
+
